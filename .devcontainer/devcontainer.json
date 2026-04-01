@@ -1,0 +1,28 @@
+{
+    "name": "Nanobot Forge",
+    "image": "nanobot-dev:latest",
+    "containerEnv": {
+        "SILICONFLOW_API_KEY": "${localEnv:SILICONFLOW_API_KEY}"
+    },
+    "runArgs": [
+        "--gpus=all",
+        "--name=nanobot-dev",
+        "--net=host",
+        "--env-file=${localWorkspaceFolder}/.env"
+    ],
+    // VS Code automatically mounts ${localWorkspaceFolder} to this path
+    "workspaceFolder": "/workspace",
+    "mounts": [
+        "source=${localWorkspaceFolder}/nanobot_data,target=/root/.nanobot,type=bind"
+    ],
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "yzhang.markdown-all-in-one"
+            ]
+        }
+    },
+    "remoteUser": "root"
+}
