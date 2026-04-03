@@ -1,9 +1,6 @@
 {
     "name": "Nanobot Forge",
     "image": "nanobot-dev:latest",
-    "containerEnv": {
-        "SILICONFLOW_API_KEY": "${localEnv:SILICONFLOW_API_KEY}"
-    },
     "runArgs": [
         "--gpus=all",
         "--name=nanobot-dev",
@@ -24,5 +21,6 @@
             ]
         }
     },
+    "postCreateCommand": "sed \"s/REPLACE_ME_WITH_REAL_KEY/$SILICONFLOW_API_KEY/g\" .devcontainer/config.template.json > /root/.nanobot/config.json",
     "remoteUser": "root"
 }

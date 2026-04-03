@@ -2,7 +2,7 @@
     "agents": {
         "defaults": {
             "workspace": "/workspace/agents",
-            "model": "siliconflow/deepseek-ai/DeepSeek-V3",
+            "model": "deepseek-ai/DeepSeek-V3",
             "provider": "siliconflow",
             "maxTokens": 8192,
             "contextWindowTokens": 65536,
@@ -176,9 +176,12 @@
             "extraHeaders": null
         },
         "openai": {
-            "apiKey": "",
-            "apiBase": null,
-            "extraHeaders": null
+            "apiKey": "sk-fhdllmmwarhhuoljivgbwowaozgqqzpfeznscvdwqsjfexeo",
+            "apiBase": "https://api.siliconflow.cn/v1",
+            "preamble": " ",
+            "extraParameters": {
+                "enable_thinking": false
+            }
         },
         "openrouter": {
             "apiKey": "",
@@ -251,8 +254,12 @@
             "extraHeaders": null
         },
         "siliconflow": {
-            "apiKey": "${env:SILICONFLOW_API_KEY}",
-            "apiBase": "https://api.siliconflow.cn/v1"
+            "apiKey": "sk-fhdllmmwarhhuoljivgbwowaozgqqzpfeznscvdwqsjfexeo",
+            "apiBase": "https://api.siliconflow.cn/v1",
+            "preamble": " ",
+            "options": {
+                "enable_thinking": false
+            }
         },
         "volcengine": {
             "apiKey": "",

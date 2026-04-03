@@ -1,4 +1,5 @@
 # Byte-compiled / optimized / DLL files
+/nanobot_data/config.json
 /.env
 __pycache__/
 *.py[codz]
